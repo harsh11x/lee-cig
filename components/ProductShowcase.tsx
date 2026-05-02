@@ -12,7 +12,7 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 1, name: 'LEE Gold', tagline: 'The signature blend', description: 'Our most iconic expression—smooth, balanced, and unmistakably LEE.', image: '/images/product-gold.jpg' },
+  { id: 1, name: 'LEE Blue', tagline: 'The signature blend', description: 'Our most iconic expression—smooth, balanced, and unmistakably LEE.', image: '/images/product-gold.jpg' },
   { id: 2, name: 'LEE Classic', tagline: 'Heritage refinement', description: 'A tribute to our roots. Timeless, reliable, always dependable.', image: '/images/product-classic.jpg' },
   { id: 3, name: 'LEE Black', tagline: 'Bold sophistication', description: 'For those who prefer intensity. Rich, full-bodied, uncompromising.', image: '/images/product-black.jpg' },
   { id: 4, name: 'LEE Reserve', tagline: 'The discerning choice', description: 'Our finest selection—a collector\'s edition for the connoisseur.', image: '/images/product-reserve.jpg' },
@@ -50,10 +50,10 @@ export default function ProductShowcase() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-light text-cream mb-2">
+          <h2 className="text-4xl md:text-5xl font-serif font-light text-foreground mb-2">
             Our Signature Range
           </h2>
-          <p className="text-cream/70 text-lg font-sans max-w-2xl">
+          <p className="text-foreground/70 text-lg font-sans max-w-2xl">
             Six meticulously crafted expressions, each telling a story of premium tobacco heritage and uncompromising quality.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function ProductShowcase() {
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               {/* Card Background */}
-              <div className="relative h-72 bg-gradient-to-br from-mahogany/30 to-dark-warm border border-gold/20 rounded overflow-hidden group-hover:border-gold/60 transition-all duration-300">
+              <div className="relative h-72 bg-gradient-to-br from-secondary/30 to-background border border-primary/20 rounded overflow-hidden group-hover:border-primary/60 transition-all duration-300">
                 {/* Product Image */}
                 <Image
                   src={product.image}
@@ -83,26 +83,26 @@ export default function ProductShowcase() {
                 />
                 
                 {/* Glow on hover */}
-                <div className="absolute inset-0 shadow-xl shadow-gold/10 group-hover:shadow-gold/30 rounded transition-all duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 shadow-xl shadow-primary/10 group-hover:shadow-primary/30 rounded transition-all duration-300 pointer-events-none"></div>
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col justify-between p-8 bg-gradient-to-t from-black/60 to-transparent">
                   {/* Top - Product Name */}
                   <div>
-                    <h3 className="font-serif text-3xl font-bold text-gold mb-1 group-hover:text-amber transition-colors">
+                    <h3 className="font-serif text-3xl font-bold text-primary mb-1 group-hover:text-secondary transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-cream/70 text-sm font-sans italic">
+                    <p className="text-foreground/70 text-sm font-sans italic">
                       {product.tagline}
                     </p>
                   </div>
 
                   {/* Bottom - Description & CTA */}
                   <div>
-                    <p className="text-cream/80 text-sm font-sans leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <p className="text-foreground/80 text-sm font-sans leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                       {product.description}
                     </p>
-                    <button className="px-6 py-2 border border-gold text-gold text-sm font-sans font-semibold hover:bg-gold hover:text-charcoal transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                    <button className="px-6 py-2 border border-primary text-primary text-sm font-sans font-semibold hover:bg-primary hover:text-background transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
                       Discover
                     </button>
                   </div>

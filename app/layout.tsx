@@ -14,8 +14,8 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'LEE - Luxury Tobacco & Fine Cigars',
-  description: 'Crafted for Those Who Demand Excellence. Premium tobacco brand positioned at the pinnacle of luxury.',
+  title: 'LEE - A Better Tomorrow',
+  description: 'Building a Smokeless World and creating A Better Tomorrow.',
   generator: 'v0.app',
 }
 
@@ -34,7 +34,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className="font-body antialiased bg-background text-cream">
+      <body className="font-body antialiased bg-background text-foreground">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

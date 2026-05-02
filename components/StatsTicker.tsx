@@ -9,7 +9,7 @@ export default function StatsTicker() {
   ]
 
   return (
-    <div className="bg-dark-warm py-6 overflow-hidden border-y border-gold/20">
+    <div className="bg-muted py-6 overflow-hidden border-y border-primary/20">
       <style>{`
         @keyframes scroll {
           0% { transform: translateX(0); }
@@ -26,10 +26,10 @@ export default function StatsTicker() {
       <div className="flex whitespace-nowrap overflow-hidden">
         <div className="ticker-content flex gap-12 px-12">
           {[...stats, ...stats].map((stat, i) => (
-            <span key={i} className="text-gold font-serif text-lg font-light flex items-center">
+            <span key={i} className="text-primary font-serif text-lg font-light flex items-center">
               {stat}
               {i % stats.length !== stats.length - 1 && (
-                <span className="ml-12 text-gold/40">·</span>
+                <span className="ml-12 text-primary/40">·</span>
               )}
             </span>
           ))}

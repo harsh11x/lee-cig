@@ -63,17 +63,17 @@ export default function EditorialCards() {
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
                 <div className="absolute top-6 left-6 inline-block">
-                  <span className="text-xs font-semibold text-gold uppercase tracking-widest bg-dark-warm/80 px-3 py-2 rounded">
+                  <span className="text-xs font-semibold text-primary uppercase tracking-widest bg-muted/80 px-3 py-2 rounded">
                     {card.category}
                   </span>
                 </div>
               </div>
               
               {/* Content */}
-              <h3 className="font-serif text-2xl font-bold text-cream mb-4 group-hover:text-gold transition-colors">
+              <h3 className="font-serif text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                 {card.headline}
               </h3>
-              <a href="#" className="text-gold text-sm font-sans hover:underline">
+              <a href="#" className="text-primary text-sm font-sans hover:underline">
                 {card.link}
               </a>
             </div>
@@ -93,18 +93,18 @@ export default function EditorialCards() {
             />
             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300"></div>
             <div className="absolute top-8 left-8">
-              <span className="text-xs font-semibold text-gold uppercase tracking-widest bg-dark-warm/80 px-4 py-3 rounded">
+              <span className="text-xs font-semibold text-primary uppercase tracking-widest bg-muted/80 px-4 py-3 rounded">
                 Community
               </span>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent">
-              <h3 className="font-serif text-3xl font-bold text-cream mb-3 group-hover:text-gold transition-colors">
+              <h3 className="font-serif text-3xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                 The People Behind Positive Change
               </h3>
-              <p className="text-cream/80 text-lg mb-4 max-w-2xl">
+              <p className="text-foreground/80 text-lg mb-4 max-w-2xl">
                 Meet the growers, scientists, and local teams building resilient communities and healthier ecosystems.
               </p>
-              <a href="#" className="text-gold text-sm font-sans hover:underline">
+              <a href="#" className="text-primary text-sm font-sans hover:underline">
                 Read more →
               </a>
             </div>

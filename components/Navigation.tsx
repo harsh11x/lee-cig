@@ -35,10 +35,10 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="sticky top-8 z-40 bg-charcoal/95 backdrop-blur-sm border-b border-gold/10">
+    <nav className="sticky top-8 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="font-serif text-3xl font-bold text-gold tracking-widest">
+        <div className="font-serif text-3xl font-bold text-primary tracking-widest">
           LEE
         </div>
 
@@ -49,7 +49,7 @@ export default function Navigation() {
               key={item.label}
               className="relative group"
             >
-              <button className="text-cream text-sm font-sans hover:text-gold transition-colors py-2">
+              <button className="text-foreground text-sm font-sans hover:text-primary transition-colors py-2">
                 {item.label}
               </button>
               {item.items.length > 0 && (
@@ -58,7 +58,7 @@ export default function Navigation() {
                     <a
                       key={subitem}
                       href="#"
-                      className="block px-6 py-2 text-cream text-sm hover:text-gold hover:bg-mahogany/30 transition-colors"
+                      className="block px-6 py-2 text-foreground text-sm hover:text-primary hover:bg-secondary/30 transition-colors"
                     >
                       {subitem}
                     </a>
@@ -71,12 +71,12 @@ export default function Navigation() {
 
         {/* Search & Mobile Menu */}
         <div className="flex items-center gap-4">
-          <button className="text-cream hover:text-gold transition-colors hidden sm:block">
+          <button className="text-foreground hover:text-primary transition-colors hidden sm:block">
             <Search size={20} />
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden text-cream hover:text-gold transition-colors"
+            className="lg:hidden text-foreground hover:text-primary transition-colors"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -85,22 +85,22 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-card border-t border-gold/10">
+        <div className="lg:hidden bg-card border-t border-primary/10">
           {menuItems.map((item) => (
             <div key={item.label}>
               <button
                 onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                className="w-full text-left px-6 py-3 text-cream hover:text-gold font-sans text-sm border-b border-gold/10 hover:bg-mahogany/20 transition-colors"
+                className="w-full text-left px-6 py-3 text-foreground hover:text-primary font-sans text-sm border-b border-primary/10 hover:bg-secondary/20 transition-colors"
               >
                 {item.label}
               </button>
               {activeDropdown === item.label && item.items.length > 0 && (
-                <div className="bg-mahogany/20">
+                <div className="bg-secondary/20">
                   {item.items.map((subitem) => (
                     <a
                       key={subitem}
                       href="#"
-                      className="block px-8 py-2 text-cream text-xs hover:text-gold"
+                      className="block px-8 py-2 text-foreground text-xs hover:text-primary"
                     >
                       {subitem}
                     </a>

@@ -10,21 +10,21 @@ export default function HeroSlider() {
   const slides = [
     {
       id: 1,
-      image: '/images/hero-1.jpg',
-      headline: 'From Leaf to Light',
-      subheadline: 'Discover the craftsmanship behind every blend. Each cigarette is a masterpiece of tradition and quality.',
+      image: '/images/hero-1.png',
+      headline: 'A Better Tomorrow',
+      subheadline: 'We are committed to Building a Smokeless World and creating A Better Tomorrow.',
     },
     {
       id: 2,
-      image: '/images/hero-2.jpg',
-      headline: 'The Lounge Experience',
-      subheadline: 'LEE is more than a cigarette. It\'s a moment of refined taste and uncompromising quality.',
+      image: '/images/hero-2.png',
+      headline: 'Advancing Sustainability',
+      subheadline: 'As we mark World Earth Day 2026, we reaffirm our commitment to a more sustainable future.',
     },
     {
       id: 3,
-      image: '/images/hero-3.jpg',
-      headline: 'A Heritage of Excellence',
-      subheadline: 'Since 1978, we\'ve been crafting premium tobacco for those who know the difference.',
+      image: '/images/hero-3.png',
+      headline: 'Transitioning to Renewable Energy',
+      subheadline: 'Our commitment to environmental sustainability drives every aspect of our operations.',
     }
   ]
 
@@ -40,7 +40,7 @@ export default function HeroSlider() {
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-charcoal">
+    <div className="relative h-screen w-full overflow-hidden bg-background">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -64,13 +64,13 @@ export default function HeroSlider() {
           {/* Content card - bottom left like BAT */}
           <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
             <div className="max-w-2xl">
-              <h1 className="font-serif text-5xl md:text-6xl font-light text-cream mb-4 leading-tight">
+              <h1 className="font-serif text-5xl md:text-6xl font-light text-white mb-4 leading-tight">
                 {slide.headline}
               </h1>
-              <p className="font-sans text-lg text-cream/90 mb-6 leading-relaxed max-w-md">
+              <p className="font-sans text-lg text-white/90 mb-6 leading-relaxed max-w-md">
                 {slide.subheadline}
               </p>
-              <button className="bg-gold text-charcoal px-8 py-3 font-sans font-bold hover:bg-amber transition-colors">
+              <button className="bg-primary text-primary-foreground px-8 py-3 font-sans font-bold hover:bg-secondary transition-colors">
                 Discover More →
               </button>
             </div>
@@ -79,13 +79,13 @@ export default function HeroSlider() {
           {/* Latest News Card - right side */}
           {index === currentSlide && (
             <div className="absolute right-8 bottom-12 w-80 bg-card/95 backdrop-blur-sm rounded shadow-2xl p-6 animate-fade-in">
-              <div className="text-xs text-gold font-semibold uppercase tracking-wider mb-2">Featured Story</div>
-              <div className="h-40 bg-gradient-to-br from-mahogany to-dark-warm rounded mb-4"></div>
+              <div className="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Featured Story</div>
+              <div className="h-40 bg-gradient-to-br from-secondary to-background rounded mb-4"></div>
               <div className="text-xs text-muted-foreground mb-2">May 2, 2026</div>
-              <h3 className="font-serif text-lg font-bold text-cream mb-3 line-clamp-2">
-                The Art of Premium Tobacco Selection
+              <h3 className="font-serif text-lg font-bold text-card-foreground mb-3 line-clamp-2">
+                World Earth Day 2026: Supporting the Transition to a Lower-Carbon Future
               </h3>
-              <a href="#" className="text-gold text-sm hover:underline flex items-center gap-2">
+              <a href="#" className="text-primary text-sm hover:underline flex items-center gap-2">
                 Read more → 
               </a>
             </div>
@@ -94,9 +94,9 @@ export default function HeroSlider() {
       ))}
 
       {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gold/20">
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary/20">
         <div
-          className="h-full bg-gold transition-all duration-300"
+          className="h-full bg-primary transition-all duration-300"
           style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
         ></div>
       </div>
@@ -108,7 +108,7 @@ export default function HeroSlider() {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-gold w-8' : 'bg-cream/40 hover:bg-cream/60'
+              index === currentSlide ? 'bg-primary w-8' : 'bg-white/40 hover:bg-white/60'
             }`}
           ></button>
         ))}
@@ -117,13 +117,13 @@ export default function HeroSlider() {
       {/* Arrow buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 text-cream hover:text-gold transition-colors z-10"
+        className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors z-10"
       >
         <ChevronLeft size={40} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 text-cream hover:text-gold transition-colors z-10"
+        className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors z-10"
       >
         <ChevronRight size={40} />
       </button>

@@ -1,6 +1,6 @@
 export default function UtilityBar() {
   return (
-    <div className="bg-red-600 text-cream text-xs py-2 px-4 flex justify-between items-center">
+    <div className="bg-red-600 text-foreground text-xs py-2 px-4 flex justify-between items-center">
       <span className="font-semibold">STATUTORY WARNING: Tobacco is injurious to health.</span>
       <div className="flex gap-6 text-xs">
         <a href="#" className="hover:underline">Media</a>

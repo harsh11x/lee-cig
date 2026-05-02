@@ -27,7 +27,7 @@ export default function SignatureBanner() {
   return (
     <section
       ref={bannerRef}
-      className="relative bg-gradient-to-r from-dark-warm via-mahogany to-dark-warm py-24 overflow-hidden"
+      className="relative bg-gradient-to-r from-secondary via-primary to-background py-24 overflow-hidden"
     >
       {/* Watermark tobacco leaf background */}
       <div className="absolute inset-0 opacity-5">
@@ -35,22 +35,22 @@ export default function SignatureBanner() {
           <path
             d="M500,100 Q600,200 650,400 Q700,600 500,900 Q300,600 350,400 Q400,200 500,100"
             fill="currentColor"
-            className="text-gold"
+            className="text-primary"
           />
         </svg>
       </div>
 
       {/* Shimmer effect */}
-      <div className="shimmer absolute inset-y-0 left-0 w-1 bg-gradient-to-r from-transparent via-gold/60 to-transparent -translate-x-1/2 pointer-events-none" />
+      <div className="shimmer absolute inset-y-0 left-0 w-1 bg-gradient-to-r from-transparent via-primary/60 to-transparent -translate-x-1/2 pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        <p className="font-serif text-5xl md:text-6xl lg:text-7xl italic font-light text-cream leading-tight">
+        <p className="font-serif text-5xl md:text-6xl lg:text-7xl italic font-light text-foreground leading-tight">
           Every Draw.
           <br />
           Every Moment.
           <br />
-          <span className="text-gold">LEE.</span>
+          <span className="text-primary">LEE.</span>
         </p>
       </div>
     </section>

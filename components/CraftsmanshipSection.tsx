@@ -39,16 +39,16 @@ export default function CraftsmanshipSection() {
                 : 'opacity-0 -translate-x-12'
             }`}
           >
-            <blockquote className="text-4xl lg:text-5xl font-serif font-light italic text-gold leading-tight">
+            <blockquote className="text-4xl lg:text-5xl font-serif font-light italic text-primary leading-tight">
               "From leaf to light, every detail is a decision."
             </blockquote>
-            <p className="text-cream/60 font-sans text-sm uppercase tracking-widest mt-6">
+            <p className="text-foreground/60 font-sans text-sm uppercase tracking-widest mt-6">
               The LEE Craftsmanship Philosophy
             </p>
           </div>
 
           {/* Divider */}
-          <div className="hidden lg:block absolute left-1/2 h-80 w-px bg-gradient-to-b from-transparent via-gold/40 to-transparent transform -translate-x-1/2" />
+          <div className="hidden lg:block absolute left-1/2 h-80 w-px bg-gradient-to-b from-transparent via-primary/40 to-transparent transform -translate-x-1/2" />
 
           {/* Right Column - Body Text */}
           <div
@@ -58,7 +58,7 @@ export default function CraftsmanshipSection() {
                 : 'opacity-0 translate-x-12'
             }`}
           >
-            <div className="space-y-5 text-cream/75 font-sans leading-relaxed">
+            <div className="space-y-5 text-foreground/75 font-sans leading-relaxed">
               <p className="text-lg">
                 LEE&apos;s commitment to excellence begins in the fields. We partner with the finest tobacco farmers across premium growing regions, selecting only leaves that meet our exacting standards.
               </p>
@@ -73,8 +73,8 @@ export default function CraftsmanshipSection() {
             </div>
 
             {/* Decorative Element */}
-            <div className="mt-8 pt-6 border-t border-gold/20">
-              <p className="text-gold font-serif text-base font-semibold tracking-wide">
+            <div className="mt-8 pt-6 border-t border-primary/20">
+              <p className="text-primary font-serif text-base font-semibold tracking-wide">
                 Craftsmanship Since 1978
               </p>
             </div>

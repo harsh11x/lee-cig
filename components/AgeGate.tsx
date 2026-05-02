@@ -20,18 +20,18 @@ export default function AgeGate({ onVerify }: AgeGateProps) {
 
       {/* Modal */}
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-        <div className="bg-card/95 backdrop-blur-sm border border-gold/30 rounded p-12 text-center max-w-md w-full shadow-2xl">
+        <div className="bg-card/95 backdrop-blur-sm border border-primary/30 rounded p-12 text-center max-w-md w-full shadow-2xl">
           {/* Logo */}
-          <div className="text-5xl font-serif font-bold text-gold mb-8 tracking-widest">
+          <div className="text-5xl font-serif font-bold text-primary mb-8 tracking-widest">
             LEE
           </div>
 
           {/* Message */}
-          <h1 className="text-2xl font-serif font-light text-cream mb-4">
+          <h1 className="text-2xl font-serif font-light text-foreground mb-4">
             Age Verification Required
           </h1>
 
-          <p className="text-cream/80 text-sm mb-8 font-sans leading-relaxed">
+          <p className="text-foreground/80 text-sm mb-8 font-sans leading-relaxed">
             This site contains adult tobacco content. Please confirm you are 18 years or older to continue.
           </p>
 
@@ -39,20 +39,20 @@ export default function AgeGate({ onVerify }: AgeGateProps) {
           <div className="flex flex-col gap-3">
             <button
               onClick={handleVerify}
-              className="bg-gold text-charcoal font-sans font-bold py-3 px-8 hover:bg-amber transition-colors duration-300 text-base"
+              className="bg-primary text-background font-sans font-bold py-3 px-8 hover:bg-secondary transition-colors duration-300 text-base"
             >
               I Am 18+
             </button>
             <button
               onClick={handleExit}
-              className="border border-cream/40 text-cream/70 font-sans py-3 px-8 hover:border-cream/70 hover:text-cream transition-colors duration-300 text-sm"
+              className="border border-muted-foreground/40 text-foreground/70 font-sans py-3 px-8 hover:border-muted-foreground/70 hover:text-foreground transition-colors duration-300 text-sm"
             >
               Exit Site
             </button>
           </div>
 
           {/* Legal disclaimer */}
-          <p className="text-cream/60 text-xs mt-8 font-sans leading-relaxed">
+          <p className="text-foreground/60 text-xs mt-8 font-sans leading-relaxed">
             STATUTORY WARNING: Tobacco is injurious to health. Smoking causes serious diseases.
           </p>
         </div>
