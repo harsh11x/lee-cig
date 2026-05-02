@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Menu, X, Search } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -49,19 +50,19 @@ export default function Navigation() {
               key={item.label}
               className="relative group"
             >
-              <button className="text-foreground text-sm font-sans hover:text-primary transition-colors py-2">
+              <Link href={`/${item.label.toLowerCase().replace(' ', '-')}`} className="text-foreground text-sm font-sans hover:text-primary transition-colors py-2 block">
                 {item.label}
-              </button>
+              </Link>
               {item.items.length > 0 && (
                 <div className="absolute left-0 mt-0 w-56 bg-card shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-4">
                   {item.items.map((subitem) => (
-                    <a
+                    <Link
                       key={subitem}
-                      href="#"
+                      href={`/${item.label.toLowerCase().replace(' ', '-')}/${subitem.toLowerCase().replace(/ /g, '-')}`}
                       className="block px-6 py-2 text-foreground text-sm hover:text-primary hover:bg-secondary/30 transition-colors"
                     >
                       {subitem}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -97,13 +98,13 @@ export default function Navigation() {
               {activeDropdown === item.label && item.items.length > 0 && (
                 <div className="bg-secondary/20">
                   {item.items.map((subitem) => (
-                    <a
+                    <Link
                       key={subitem}
-                      href="#"
+                      href={`/${item.label.toLowerCase().replace(' ', '-')}/${subitem.toLowerCase().replace(/ /g, '-')}`}
                       className="block px-8 py-2 text-foreground text-xs hover:text-primary"
                     >
                       {subitem}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}

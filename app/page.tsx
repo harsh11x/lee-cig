@@ -6,7 +6,6 @@ import Navigation from '@/components/Navigation'
 import AgeGate from '@/components/AgeGate'
 import HeroSlider from '@/components/HeroSlider'
 import StatsTicker from '@/components/StatsTicker'
-import EditorialCards from '@/components/EditorialCards'
 import ProductShowcase from '@/components/ProductShowcase'
 import CraftsmanshipSection from '@/components/CraftsmanshipSection'
 import StoriesAndPress from '@/components/StoriesAndPress'
@@ -39,7 +38,6 @@ export default function Home() {
       <main className="w-full bg-background">
         <HeroSlider />
         <StatsTicker />
-        <EditorialCards />
         <ProductShowcase />
         <CraftsmanshipSection />
         <StoriesAndPress />

@@ -47,7 +47,7 @@ export default function ProductShowcase() {
               className={`group cursor-pointer transition-all duration-700 opacity-100 translate-y-0`}
             >
               {/* Card Background */}
-              <div className="relative h-72 bg-gradient-to-br from-secondary/30 to-background border border-primary/20 rounded overflow-hidden group-hover:border-primary/60 transition-all duration-300">
+              <div className="relative h-72 bg-black border border-white/10 rounded overflow-hidden group-hover:border-white/40 transition-all duration-300">
                 {/* Product Image */}
                 <Image
                   src={product.image}

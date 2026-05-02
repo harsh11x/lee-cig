@@ -12,30 +12,22 @@ export default function SignatureBanner() {
   return (
     <section
       ref={bannerRef}
-      className="relative bg-gradient-to-r from-secondary via-primary to-background py-24 overflow-hidden"
+      className="relative bg-black py-24 overflow-hidden"
     >
-      {/* Watermark tobacco leaf background */}
-      <div className="absolute inset-0 opacity-5">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000">
-          <path
-            d="M500,100 Q600,200 650,400 Q700,600 500,900 Q300,600 350,400 Q400,200 500,100"
-            fill="currentColor"
-            className="text-primary"
-          />
-        </svg>
-      </div>
+      {/* Background with luxury black */}
+      <div className="absolute inset-0 bg-black" />
 
       {/* Shimmer effect */}
 
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        <p className="font-serif text-5xl md:text-6xl lg:text-7xl italic font-light text-foreground leading-tight">
-          Every Draw.
-          <br />
+        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight mb-8">
+          Every Draw.<br />
           Every Moment.
-          <br />
-          <span className="text-primary">LEE.</span>
+        </h2>
+        <p className="text-4xl md:text-6xl font-serif text-white/40 italic">
+          LEE.
         </p>
       </div>
     </section>
