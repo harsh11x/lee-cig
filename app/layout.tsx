@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ 
+const montserrat = Montserrat({ 
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700']
+})
+
+const playfair = Playfair_Display({ 
+  subsets: ["latin"],
+  weight: ['400', '600', '700', '900']
 })
 
 export const metadata: Metadata = {
@@ -24,8 +29,8 @@ export default function RootLayout({
       <head>
         <style>{`
           :root {
-            --font-display: ${inter.style.fontFamily};
-            --font-body: ${inter.style.fontFamily};
+            --font-display: ${playfair.style.fontFamily};
+            --font-body: ${montserrat.style.fontFamily};
           }
         `}</style>
       </head>

@@ -1,62 +1,110 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-const focusAreas = [
-  {
-    id: 'science',
-    title: 'Science',
-    headline: 'Forward Thinking for a Smokeless World',
-    image: '/images/science.png',
-    linkText: 'Read more >'
-  },
-  {
-    id: 'innovation',
-    title: 'Innovation',
-    headline: 'New Categories fuelling faster transformation',
-    image: '/images/innovation.png',
-    linkText: 'Read more >'
-  },
-  {
-    id: 'sustainability',
-    title: 'Sustainability',
-    headline: 'Advancing Sustainability for A Better Tomorrow™',
-    image: '/images/sustainability.png',
-    linkText: 'Read more >'
-  }
+interface Product {
+  id: number
+  name: string
+  tagline: string
+  description: string
+  image: string
+}
+
+const products: Product[] = [
+  { id: 1, name: 'LEE Blue', tagline: 'The signature blend', description: 'Our most iconic expression—smooth, balanced, and unmistakably LEE.', image: '/images/product-gold.jpg' },
+  { id: 2, name: 'LEE Classic', tagline: 'Heritage refinement', description: 'A tribute to our roots. Timeless, reliable, always dependable.', image: '/images/product-classic.jpg' },
+  { id: 3, name: 'LEE Black', tagline: 'Bold sophistication', description: 'For those who prefer intensity. Rich, full-bodied, uncompromising.', image: '/images/product-black.jpg' },
+  { id: 4, name: 'LEE Reserve', tagline: 'The discerning choice', description: 'Our finest selection—a collector\'s edition for the connoisseur.', image: '/images/product-reserve.jpg' },
+  { id: 5, name: 'LEE Menthol', tagline: 'Crisp & clean', description: 'Refreshing sophistication. The cool counterpoint to our classic collection.', image: '/images/product-menthol.jpg' },
+  { id: 6, name: 'LEE No.1', tagline: 'The original', description: 'Where it all began. The blend that started a legacy of excellence.', image: '/images/product-no1.jpg' },
 ]
 
 export default function ProductShowcase() {
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.getAttribute('data-index') || '0')
+            setTimeout(() => setVisibleIndex(index), index * 100)
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    const cards = document.querySelectorAll('[data-product-card]')
+    cards.forEach((card) => observer.observe(card))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="w-full bg-background pt-12 pb-24 px-6 border-b border-border">
+    <section
+      id="products"
+      className="w-full py-20 bg-background px-6"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {focusAreas.map((area) => (
-            <div key={area.id} className="group relative flex flex-col cursor-pointer overflow-hidden rounded-sm shadow-sm hover:shadow-xl transition-all duration-300">
-              {/* Image Container */}
-              <div className="relative h-[400px] w-full overflow-hidden">
+        {/* Section Title */}
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif font-light text-foreground mb-2">
+            Our Signature Range
+          </h2>
+          <p className="text-foreground/70 text-lg font-sans max-w-2xl">
+            Six meticulously crafted expressions, each telling a story of premium tobacco heritage and uncompromising quality.
+          </p>
+        </div>
+
+        {/* Product Grid - 3x2 responsive */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {products.map((product, index) => (
+            <div
+              key={product.id}
+              data-index={index}
+              data-product-card
+              className={`group cursor-pointer transition-all duration-700 ${
+                visibleIndex === index
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 80}ms` }}
+            >
+              {/* Card Background */}
+              <div className="relative h-72 bg-gradient-to-br from-secondary/30 to-background border border-primary/20 rounded overflow-hidden group-hover:border-primary/60 transition-all duration-300">
+                {/* Product Image */}
                 <Image
-                  src={area.image}
-                  alt={area.title}
+                  src={product.image}
+                  alt={product.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 
-                {/* Overlay Gradient (Darker at bottom) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-                
-                {/* Top Label */}
-                <div className="absolute top-0 left-0 bg-white/20 backdrop-blur-md px-4 py-2">
-                  <span className="text-white text-xs font-bold uppercase tracking-wider">{area.title}</span>
-                </div>
-                
-                {/* Content at Bottom */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <h3 className="font-sans text-2xl font-bold mb-4 leading-tight group-hover:text-secondary transition-colors">
-                    {area.headline}
-                  </h3>
-                  <div className="text-sm font-semibold flex items-center gap-2 text-white/90 group-hover:text-white transition-colors">
-                    {area.linkText}
+                {/* Glow on hover */}
+                <div className="absolute inset-0 shadow-xl shadow-primary/10 group-hover:shadow-primary/30 rounded transition-all duration-300 pointer-events-none"></div>
+
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-between p-8 bg-gradient-to-t from-black/60 to-transparent">
+                  {/* Top - Product Name */}
+                  <div>
+                    <h3 className="font-serif text-3xl font-bold text-primary mb-1 group-hover:text-secondary transition-colors">
+                      {product.name}
+                    </h3>
+                    <p className="text-foreground/70 text-sm font-sans italic">
+                      {product.tagline}
+                    </p>
+                  </div>
+
+                  {/* Bottom - Description & CTA */}
+                  <div>
+                    <p className="text-foreground/80 text-sm font-sans leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      {product.description}
+                    </p>
+                    <button className="px-6 py-2 border border-primary text-primary text-sm font-sans font-semibold hover:bg-primary hover:text-background transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                      Discover
+                    </button>
                   </div>
                 </div>
               </div>

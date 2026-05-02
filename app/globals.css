@@ -1,36 +1,33 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  /* Corporate Power Palette */
-  --background: #ffffff;
-  --foreground: #1e293b;
-  --cream: #ffffff;
-  --charcoal: #ffffff;
-  --mahogany: #0ea5e9;
-  --gold: #0f3c7d;
-  --amber: #38bdf8;
-  --dark-warm: #f8fafc;
+  /* Premium Night Party Luxury Palette */
+  --background: #050505;
+  --foreground: #ffffff;
+  --cream: #f3f4f6;
+  --charcoal: #111111;
+  --mahogany: #1a1a1a;
+  --gold: #C5A059;
+  --amber: #D4AF37;
+  --dark-warm: #0a0a0a;
   
-  --card: #ffffff;
-  --card-foreground: #1e293b;
-  --popover: #ffffff;
-  --popover-foreground: #1e293b;
-  --primary: #0f3c7d;
-  --primary-foreground: #ffffff;
-  --secondary: #0ea5e9;
-  --secondary-foreground: #ffffff;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #e0f2fe;
-  --accent-foreground: #0f3c7d;
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
+  --primary: #C5A059;
+  --primary-foreground: #000000;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #C5A059;
+  --muted: #222222;
+  --muted-foreground: #a3a3a3;
+  --accent: #222222;
+  --accent-foreground: #C5A059;
   --destructive: #ef4444;
-  --destructive-foreground: #fef2f2;
-  --border: #e2e8f0;
-  --input: #ffffff;
-  --ring: #0f3c7d;
+  --destructive-foreground: #ffffff;
+  --border: #333333;
+  --input: #111111;
+  --ring: #C5A059;
   --chart-1: #0284c7;
   --chart-2: #10b981;
   --chart-3: #22c55e;
@@ -109,7 +106,7 @@
   
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-bold tracking-tight;
+    @apply font-serif tracking-wide;
   }
 
   .animate-fade-in {
