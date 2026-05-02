@@ -54,7 +54,7 @@ export default function StoriesAndPress() {
       id: 3,
       date: 'April 1, 2026',
       title: 'New Sustainability Report Highlights Environmental Progress',
-      excerpt: 'The latest roadmap outlines measurable carbon reductions and expanded investment in regenerative agriculture.',
+      excerpt: 'LEE commits to carbon-neutral operations by 2030, announces major investment in sustainable farming.',
       image: '/images/press-3.jpg'
     }
   ]

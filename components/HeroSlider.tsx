@@ -11,20 +11,20 @@ export default function HeroSlider() {
     {
       id: 1,
       image: '/images/hero-1.jpg',
-      headline: 'A Better Tomorrow Through Nature',
-      subheadline: 'We are restoring greener landscapes through regenerative farming, biodiversity projects, and cleaner operations.',
+      headline: 'From Leaf to Light',
+      subheadline: 'Discover the craftsmanship behind every blend. Each cigarette is a masterpiece of tradition and quality.',
     },
     {
       id: 2,
       image: '/images/hero-2.jpg',
-      headline: 'Innovation With Living Impact',
-      subheadline: 'From low-impact materials to circular packaging, each improvement is designed to support people and planet.',
+      headline: 'The Lounge Experience',
+      subheadline: 'LEE is more than a cigarette. It\'s a moment of refined taste and uncompromising quality.',
     },
     {
       id: 3,
       image: '/images/hero-3.jpg',
-      headline: 'Communities Growing Together',
-      subheadline: 'Our long-term partnerships with growers and local communities are building resilient livelihoods and healthier ecosystems.',
+      headline: 'A Heritage of Excellence',
+      subheadline: 'Since 1978, we\'ve been crafting premium tobacco for those who know the difference.',
     }
   ]
 
@@ -59,10 +59,10 @@ export default function HeroSlider() {
           />
 
           {/* Overlay for text readability */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-black/45"></div>
 
           {/* Content card - bottom left like BAT */}
-          <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+          <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
             <div className="max-w-2xl">
               <h1 className="font-serif text-5xl md:text-6xl font-light text-cream mb-4 leading-tight">
                 {slide.headline}
@@ -71,7 +71,7 @@ export default function HeroSlider() {
                 {slide.subheadline}
               </p>
               <button className="bg-gold text-charcoal px-8 py-3 font-sans font-bold hover:bg-amber transition-colors">
-                Explore Our Impact →
+                Discover More →
               </button>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function HeroSlider() {
               <div className="h-40 bg-gradient-to-br from-mahogany to-dark-warm rounded mb-4"></div>
               <div className="text-xs text-muted-foreground mb-2">May 2, 2026</div>
               <h3 className="font-serif text-lg font-bold text-cream mb-3 line-clamp-2">
-                Reforestation Partnerships Reaching New Regions
+                The Art of Premium Tobacco Selection
               </h3>
               <a href="#" className="text-gold text-sm hover:underline flex items-center gap-2">
                 Read more → 

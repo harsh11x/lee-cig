@@ -12,6 +12,7 @@ import CraftsmanshipSection from '@/components/CraftsmanshipSection'
 import StoriesAndPress from '@/components/StoriesAndPress'
 import SignatureBanner from '@/components/SignatureBanner'
 import Footer from '@/components/Footer'
+import CursorTrail from '@/components/CursorTrail'
 
 export default function Home() {
   const [ageVerified, setAgeVerified] = useState(false)
@@ -34,6 +35,7 @@ export default function Home() {
 
   return (
     <>
+      <CursorTrail />
       <UtilityBar />
       <Navigation />
       <main className="w-full bg-background">
