@@ -43,7 +43,7 @@ export default function CraftsmanshipSection() {
               "From leaf to light, every detail is a decision."
             </blockquote>
             <p className="text-foreground/60 font-sans text-sm uppercase tracking-widest mt-6">
-              The LEE Craftsmanship Philosophy
+              The LEEU Craftsmanship Philosophy
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export default function CraftsmanshipSection() {
           >
             <div className="space-y-5 text-foreground/75 font-sans leading-relaxed">
               <p className="text-lg">
-                LEE&apos;s commitment to excellence begins in the fields. We partner with the finest tobacco farmers across premium growing regions, selecting only leaves that meet our exacting standards.
+                LEEU&apos;s commitment to excellence begins in the fields. We partner with the finest tobacco farmers across premium growing regions, selecting only leaves that meet our exacting standards.
               </p>
 
               <p>

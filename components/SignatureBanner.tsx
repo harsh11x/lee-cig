@@ -27,7 +27,7 @@ export default function SignatureBanner() {
           Every Moment.
         </h2>
         <p className="text-3xl sm:text-4xl md:text-6xl font-serif text-white/40 italic">
-          LEE.
+          LEEU.
         </p>
       </div>
     </section>

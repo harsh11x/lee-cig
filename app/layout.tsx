@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'LEE - A Better Tomorrow',
+  title: 'LEEU - A Better Tomorrow',
   description: 'Building a Smokeless World and creating A Better Tomorrow.',
   generator: 'v0.app',
 }

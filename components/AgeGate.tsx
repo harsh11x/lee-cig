@@ -23,7 +23,7 @@ export default function AgeGate({ onVerify }: AgeGateProps) {
         <div className="bg-card/95 backdrop-blur-sm border border-primary/30 rounded p-12 text-center max-w-md w-full shadow-2xl">
           {/* Logo */}
           <div className="text-5xl font-serif font-bold text-primary mb-8 tracking-widest">
-            LEE
+            LEEU
           </div>
 
           {/* Message */}

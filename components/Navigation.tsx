@@ -40,7 +40,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="font-sans text-4xl font-black text-primary tracking-widest">
-          LEE
+          LEEU
         </div>
 
         {/* Desktop Menu */}

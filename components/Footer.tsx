@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Company Column */}
           <div>
             <h3 className="text-3xl font-serif font-black text-white mb-6 tracking-widest">
-              LEE
+              LEEU
             </h3>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-white/70 hover:text-white font-sans text-sm transition-colors">About</Link></li>
@@ -26,7 +26,7 @@ export default function Footer() {
               Our Brands
             </h4>
             <ul className="space-y-2">
-              {['LEE Blue', 'LEE Classic', 'LEE Black', 'LEE Reserve', 'LEE Menthol', 'LEE No.1'].map((brand) => (
+              {['LEEU Blue', 'LEEU Classic', 'LEEU Black', 'LEEU Reserve', 'LEEU Menthol', 'LEEU No.1'].map((brand) => (
                 <li key={brand}>
                   <Link href={`/brands/${brand.toLowerCase().replace(' ', '-')}`} className="text-white/70 hover:text-white font-sans text-sm transition-colors">
                     {brand}
@@ -74,7 +74,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="text-center">
-              <p className="text-white/60">© 2026 LEE. All rights reserved.</p>
+              <p className="text-white/60">© 2026 LEEU. All rights reserved.</p>
             </div>
             <div className="text-right space-y-1">
               <Link href="/privacy" className="block hover:text-white transition-colors">Privacy Policy</Link>

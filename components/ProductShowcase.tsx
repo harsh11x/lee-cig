@@ -12,12 +12,12 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 1, name: 'LEE Blue', tagline: 'The signature blend', description: 'Our most iconic expression—smooth, balanced, and unmistakably LEE.', image: '/images/product-gold.jpg' },
-  { id: 2, name: 'LEE Classic', tagline: 'Heritage refinement', description: 'A tribute to our roots. Timeless, reliable, always dependable.', image: '/images/product-classic.jpg' },
-  { id: 3, name: 'LEE Black', tagline: 'Bold sophistication', description: 'For those who prefer intensity. Rich, full-bodied, uncompromising.', image: '/images/product-black.jpg' },
-  { id: 4, name: 'LEE Reserve', tagline: 'The discerning choice', description: 'Our finest selection—a collector\'s edition for the connoisseur.', image: '/images/product-reserve.jpg' },
-  { id: 5, name: 'LEE Menthol', tagline: 'Crisp & clean', description: 'Refreshing sophistication. The cool counterpoint to our classic collection.', image: '/images/product-menthol.jpg' },
-  { id: 6, name: 'LEE No.1', tagline: 'The original', description: 'Where it all began. The blend that started a legacy of excellence.', image: '/images/product-no1.jpg' },
+  { id: 1, name: 'LEEU Blue', tagline: 'The signature blend', description: 'Our most iconic expression—smooth, balanced, and unmistakably LEEU.', image: '/images/product-gold.jpg' },
+  { id: 2, name: 'LEEU Classic', tagline: 'Heritage refinement', description: 'A tribute to our roots. Timeless, reliable, always dependable.', image: '/images/product-classic.jpg' },
+  { id: 3, name: 'LEEU Black', tagline: 'Bold sophistication', description: 'For those who prefer intensity. Rich, full-bodied, uncompromising.', image: '/images/product-black.jpg' },
+  { id: 4, name: 'LEEU Reserve', tagline: 'The discerning choice', description: 'Our finest selection—a collector\'s edition for the connoisseur.', image: '/images/product-reserve.jpg' },
+  { id: 5, name: 'LEEU Menthol', tagline: 'Crisp & clean', description: 'Refreshing sophistication. The cool counterpoint to our classic collection.', image: '/images/product-menthol.jpg' },
+  { id: 6, name: 'LEEU No.1', tagline: 'The original', description: 'Where it all began. The blend that started a legacy of excellence.', image: '/images/product-no1.jpg' },
 ]
 
 export default function ProductShowcase() {
