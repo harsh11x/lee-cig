@@ -20,21 +20,21 @@ export default function EditorialCards() {
     {
       id: 1,
       category: 'Heritage',
-      headline: 'The Story Behind Every Blend',
+      headline: 'Growing Better Futures Together',
       image: '/images/editorial-1.jpg',
       link: 'Read more →'
     },
     {
       id: 2,
       category: 'Innovation',
-      headline: 'Craftsmanship Meets Modern Excellence',
+      headline: 'Designing Products for a Lower-Impact Tomorrow',
       image: '/images/editorial-2.jpg',
       link: 'Read more →'
     },
     {
       id: 3,
       category: 'Sustainability',
-      headline: 'Responsible Tobacco for Tomorrow',
+      headline: 'Restoring Nature Through Regenerative Farming',
       image: '/images/editorial-3.jpg',
       link: 'Read more →'
     }
@@ -87,7 +87,7 @@ export default function EditorialCards() {
           <div className="relative h-80 rounded overflow-hidden mb-6">
             <Image
               src="/images/editorial-4.jpg"
-              alt="The People Behind the Craft"
+              alt="The People Behind Positive Change"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -99,10 +99,10 @@ export default function EditorialCards() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent">
               <h3 className="font-serif text-3xl font-bold text-cream mb-3 group-hover:text-gold transition-colors">
-                The People Behind the Craft
+                The People Behind Positive Change
               </h3>
               <p className="text-cream/80 text-lg mb-4 max-w-2xl">
-                Meet the artisans, farmers, and tobacco masters who dedicate their lives to LEE's uncompromising quality.
+                Meet the growers, scientists, and local teams building resilient communities and healthier ecosystems.
               </p>
               <a href="#" className="text-gold text-sm font-sans hover:underline">
                 Read more →

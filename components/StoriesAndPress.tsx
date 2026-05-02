@@ -20,16 +20,16 @@ export default function StoriesAndPress() {
     {
       id: 1,
       date: 'May 2026',
-      title: 'Inside the Tobacco Fields: Our Heritage Collection',
-      excerpt: 'Discover how three generations of farmers have perfected the art of premium tobacco cultivation.',
+      title: 'Inside Regenerative Farms: A New Approach',
+      excerpt: 'See how farming partners are improving soil health, water retention, and biodiversity year after year.',
       category: 'Heritage',
       image: '/images/press-2.jpg'
     },
     {
       id: 2,
       date: 'April 2026',
-      title: 'The Art of Blending: A Master Class',
-      excerpt: 'Our lead blender shares the secrets behind LEE&apos;s signature flavor profile and the science of tobacco harmony.',
+      title: 'Cleaner Innovation: A Practical Master Class',
+      excerpt: 'Our teams share how material choices and product design are reducing environmental impact across markets.',
       category: 'Craftsmanship',
       image: '/images/craftsmanship.jpg'
     }
@@ -39,22 +39,22 @@ export default function StoriesAndPress() {
     {
       id: 1,
       date: 'May 1, 2026',
-      title: 'LEE Launches New Reserve Collection in 15 Markets',
-      excerpt: 'Premium tobacco brand announces expansion of signature range with unprecedented distribution.',
+      title: 'BAT Expands Nature-Positive Projects in 15 Markets',
+      excerpt: 'New programs focus on ecosystem restoration, responsible sourcing, and measurable community outcomes.',
       image: '/images/press-1.jpg'
     },
     {
       id: 2,
       date: 'April 15, 2026',
-      title: 'LEE Receives International Quality Recognition',
-      excerpt: 'Brand honored for excellence in craftsmanship and sustainable tobacco sourcing practices.',
+      title: 'BAT Recognized for Environmental Progress',
+      excerpt: 'Independent review highlights year-on-year improvements in sustainability performance and transparency.',
       image: '/images/press-2.jpg'
     },
     {
       id: 3,
       date: 'April 1, 2026',
       title: 'New Sustainability Report Highlights Environmental Progress',
-      excerpt: 'LEE commits to carbon-neutral operations by 2030, announces major investment in sustainable farming.',
+      excerpt: 'The latest roadmap outlines measurable carbon reductions and expanded investment in regenerative agriculture.',
       image: '/images/press-3.jpg'
     }
   ]
