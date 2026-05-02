@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+:root {
   /* Premium Night Party Luxury Palette */
   --background: #050505;
   --foreground: #ffffff;
