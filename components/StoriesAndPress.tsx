@@ -1,155 +1,96 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
+const stories = [
+  {
+    id: 1,
+    title: 'The Smokeless World – A Conversation',
+    date: '30 April 2026',
+    description: "Different speeds. Different maturities. Different rules. That's the reality of a region that houses 78% of the global population and 25/33 of the world's megacities.",
+    category: 'Stories and features',
+    image: '/images/stories-1.png'
+  },
+  {
+    id: 2,
+    title: 'World Earth Day 2026: Supporting the Transition to a Lower-Carbon Future',
+    date: '22 April 2026',
+    description: "As we mark World Earth Day 2026, we reaffirm our commitment to building A Better Tomorrow™ by continuing our transition towards a more sustainable future.",
+    category: 'Stories and features',
+    image: '/images/stories-2.png'
+  }
+]
+
+const pressReleases = [
+  {
+    id: 1,
+    title: 'AGM 2026: Chair\'s address',
+    date: '15 April 2026',
+    category: 'Speech',
+    description: 'The 2026 AGM is a valuable opportunity to hear from our shareholders. A forum to look back at our performance during the past year and also to look ahead.'
+  },
+  {
+    id: 2,
+    title: 'New Chief Financial Officer Appointed',
+    date: '9 April 2026',
+    category: 'Press release',
+    description: 'We are pleased to announce the appointment of our new Chief Financial Officer and Executive Director with effect from 1 September 2026.'
+  }
+]
+
 export default function StoriesAndPress() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && setIsVisible(true),
-      { threshold: 0.1 }
-    )
-    const element = document.getElementById('stories-press')
-    if (element) observer.observe(element)
-    return () => observer.disconnect()
-  }, [])
-
-  const stories = [
-    {
-      id: 1,
-      date: 'May 2026',
-      title: 'Inside Regenerative Farms: A New Approach',
-      excerpt: 'See how farming partners are improving soil health, water retention, and biodiversity year after year.',
-      category: 'Heritage',
-      image: '/images/press-2.jpg'
-    },
-    {
-      id: 2,
-      date: 'April 2026',
-      title: 'Cleaner Innovation: A Practical Master Class',
-      excerpt: 'Our teams share how material choices and product design are reducing environmental impact across markets.',
-      category: 'Craftsmanship',
-      image: '/images/craftsmanship.jpg'
-    }
-  ]
-
-  const pressReleases = [
-    {
-      id: 1,
-      date: 'May 1, 2026',
-      title: 'BAT Expands Nature-Positive Projects in 15 Markets',
-      excerpt: 'New programs focus on ecosystem restoration, responsible sourcing, and measurable community outcomes.',
-      image: '/images/press-1.jpg'
-    },
-    {
-      id: 2,
-      date: 'April 15, 2026',
-      title: 'BAT Recognized for Environmental Progress',
-      excerpt: 'Independent review highlights year-on-year improvements in sustainability performance and transparency.',
-      image: '/images/press-2.jpg'
-    },
-    {
-      id: 3,
-      date: 'April 1, 2026',
-      title: 'New Sustainability Report Highlights Environmental Progress',
-      excerpt: 'LEE commits to carbon-neutral operations by 2030, announces major investment in sustainable farming.',
-      image: '/images/press-3.jpg'
-    }
-  ]
-
   return (
-    <section id="stories-press" className="bg-background py-20 px-6">
+    <section className="w-full bg-primary text-primary-foreground py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-foreground mb-16">
-          Stories &amp; Press
-        </h2>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Left side - Stories (wider) */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xl font-serif font-bold text-foreground mb-8">Latest Stories &amp; Features</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              {stories.map((story, index) => (
-                <div
-                  key={story.id}
-                  className={`group cursor-pointer transition-all duration-700 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  {/* Image */}
-                  <div className="relative h-48 rounded overflow-hidden mb-4 border border-primary/10 group-hover:border-primary/40 transition-colors">
-                    <Image
-                      src={story.image}
+        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-16">
+          {/* Left Column - Stories */}
+          <div>
+            <h2 className="text-3xl font-sans font-bold mb-10 tracking-tight">Latest stories and features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {stories.map(story => (
+                <div key={story.id} className="flex flex-col group cursor-pointer">
+                  <div className="relative h-64 mb-6 overflow-hidden rounded-sm">
+                    <Image 
+                      src={story.image} 
                       alt={story.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="text-xs font-semibold text-primary uppercase tracking-widest bg-muted/70 px-3 py-2 rounded">
-                        {story.category}
-                      </span>
-                    </div>
                   </div>
-                  
-                  <div className="text-xs text-muted-foreground font-sans uppercase tracking-wider mb-2">
-                    {story.date}
+                  <div className="flex justify-between items-center text-xs font-semibold text-primary-foreground/80 mb-3">
+                    <span>{story.category}</span>
+                    <span>{story.date}</span>
                   </div>
-                  <h4 className="text-lg font-serif font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold font-sans mb-3 group-hover:text-secondary transition-colors leading-tight">
                     {story.title}
-                  </h4>
-                  <p className="text-foreground/70 text-sm font-sans line-clamp-2 mb-3">
-                    {story.excerpt}
+                  </h3>
+                  <p className="text-sm text-primary-foreground/80 leading-relaxed font-sans">
+                    {story.description}
                   </p>
-                  <a href="#" className="text-primary text-sm font-sans hover:underline">
-                    Read more →
-                  </a>
                 </div>
               ))}
             </div>
-
-            <button className="text-primary font-sans text-sm font-semibold hover:underline">
-              View all stories →
-            </button>
           </div>
 
-          {/* Divider */}
-          <div className="hidden lg:block w-px bg-gradient-to-b from-primary/20 via-primary/10 to-transparent"></div>
-
-          {/* Right side - Press Releases (narrower) */}
-          <div>
-            <h3 className="text-xl font-serif font-bold text-foreground mb-8">Press Releases</h3>
-            
-            <div className="space-y-8">
-              {pressReleases.map((release, index) => (
-                <div
-                  key={release.id}
-                  className={`group transition-all duration-700 pb-8 border-b border-primary/10 last:border-b-0 ${
-                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-                  }`}
-                  style={{ transitionDelay: `${(2 + index) * 100}ms` }}
-                >
-                  <div className="text-xs text-muted-foreground font-sans uppercase tracking-wider mb-2">
-                    {release.date}
+          {/* Right Column - Press Releases */}
+          <div className="lg:pl-8 lg:border-l border-primary-foreground/20">
+            <h2 className="text-3xl font-sans font-bold mb-10 tracking-tight">Latest press releases</h2>
+            <div className="flex flex-col gap-0">
+              {pressReleases.map((press, index) => (
+                <div key={press.id} className={`py-6 flex flex-col group cursor-pointer ${index !== 0 ? 'border-t border-primary-foreground/20' : ''}`}>
+                  <div className="flex justify-between items-center text-xs font-semibold text-primary-foreground/80 mb-3">
+                    <span>{press.category}</span>
+                    <span>{press.date}</span>
                   </div>
-                  <h4 className="text-base font-serif font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {release.title}
-                  </h4>
-                  <p className="text-foreground/70 text-xs font-sans leading-relaxed line-clamp-2">
-                    {release.excerpt}
+                  <h3 className="text-xl font-bold font-sans mb-3 group-hover:text-secondary transition-colors leading-tight">
+                    {press.title}
+                  </h3>
+                  <p className="text-sm text-primary-foreground/80 leading-relaxed font-sans">
+                    {press.description}
                   </p>
                 </div>
               ))}
             </div>
-
-            <button className="text-primary font-sans text-sm font-semibold hover:underline mt-8">
-              View all press →
-            </button>
           </div>
         </div>
       </div>

@@ -1,16 +1,11 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Lato } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({ 
+const inter = Inter({ 
   subsets: ["latin"],
-  weight: ['300', '400', '600', '700']
-})
-
-const lato = Lato({ 
-  subsets: ["latin"],
-  weight: ['400', '700']
+  weight: ['300', '400', '500', '600', '700']
 })
 
 export const metadata: Metadata = {
@@ -29,8 +24,8 @@ export default function RootLayout({
       <head>
         <style>{`
           :root {
-            --font-display: ${cormorant.style.fontFamily};
-            --font-body: ${lato.style.fontFamily};
+            --font-display: ${inter.style.fontFamily};
+            --font-body: ${inter.style.fontFamily};
           }
         `}</style>
       </head>

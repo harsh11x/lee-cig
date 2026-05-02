@@ -4,33 +4,33 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Nature Friendly Lively Palette */
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --cream: #0f172a;
+  /* Corporate Power Palette */
+  --background: #ffffff;
+  --foreground: #1e293b;
+  --cream: #ffffff;
   --charcoal: #ffffff;
-  --mahogany: #10b981;
-  --gold: #0284c7;
-  --amber: #22c55e;
-  --dark-warm: #f0fdf4;
+  --mahogany: #0ea5e9;
+  --gold: #0f3c7d;
+  --amber: #38bdf8;
+  --dark-warm: #f8fafc;
   
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #1e293b;
   --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #0284c7;
+  --popover-foreground: #1e293b;
+  --primary: #0f3c7d;
   --primary-foreground: #ffffff;
-  --secondary: #10b981;
+  --secondary: #0ea5e9;
   --secondary-foreground: #ffffff;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
   --accent: #e0f2fe;
-  --accent-foreground: #0f172a;
+  --accent-foreground: #0f3c7d;
   --destructive: #ef4444;
   --destructive-foreground: #fef2f2;
   --border: #e2e8f0;
   --input: #ffffff;
-  --ring: #38bdf8;
+  --ring: #0f3c7d;
   --chart-1: #0284c7;
   --chart-2: #10b981;
   --chart-3: #22c55e;
@@ -109,7 +109,7 @@
   
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-sans font-bold tracking-tight;
   }
 
   .animate-fade-in {

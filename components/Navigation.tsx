@@ -14,7 +14,7 @@ export default function Navigation() {
     },
     {
       label: 'Our Brands',
-      items: ['LEE Gold', 'LEE Classic', 'LEE Black', 'LEE Reserve', 'LEE Menthol', 'LEE No.1']
+      items: ['Vuse', 'Velo', 'glo™', 'Pall Mall', 'Lucky Strike', 'Dunhill']
     },
     {
       label: 'Craftsmanship',
@@ -38,7 +38,7 @@ export default function Navigation() {
     <nav className="sticky top-8 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="font-serif text-3xl font-bold text-primary tracking-widest">
+        <div className="font-sans text-4xl font-black text-primary tracking-widest">
           LEE
         </div>
 
