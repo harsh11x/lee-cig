@@ -36,7 +36,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="sticky top-8 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/10">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="font-sans text-4xl font-black text-primary tracking-widest">
@@ -86,7 +86,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-card border-t border-primary/10">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-background border-b border-white/10 shadow-2xl z-50 max-h-[80vh] overflow-y-auto">
           {menuItems.map((item) => (
             <div key={item.label}>
               <button

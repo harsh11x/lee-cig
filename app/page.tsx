@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import UtilityBar from '@/components/UtilityBar'
 import Navigation from '@/components/Navigation'
 import AgeGate from '@/components/AgeGate'
 import HeroSlider from '@/components/HeroSlider'
@@ -33,7 +32,6 @@ export default function Home() {
 
   return (
     <>
-      <UtilityBar />
       <Navigation />
       <main className="w-full bg-background">
         <HeroSlider />

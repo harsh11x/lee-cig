@@ -63,9 +63,9 @@ export default function HeroSlider() {
           <div className="absolute inset-0 bg-black/40"></div>
 
           {/* Content card - bottom left like BAT */}
-          <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-            <div className="max-w-2xl">
-              <h1 className="font-serif text-5xl md:text-6xl font-light text-white mb-4 leading-tight">
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 bg-gradient-to-t from-black via-black/60 to-transparent">
+            <div className="max-w-2xl mt-auto pt-20">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-light text-white mb-4 leading-tight">
                 {slide.headline}
               </h1>
               <p className="font-sans text-lg text-white/90 mb-6 leading-relaxed max-w-md">
@@ -79,7 +79,7 @@ export default function HeroSlider() {
 
           {/* Latest News Card - right side */}
           {index === currentSlide && (
-            <div className="absolute right-8 bottom-12 w-80 bg-card/95 backdrop-blur-sm rounded shadow-2xl p-6 animate-fade-in">
+            <div className="hidden lg:block absolute right-8 bottom-12 w-80 bg-black/80 backdrop-blur-md rounded border border-white/10 shadow-2xl p-6 animate-fade-in">
               <div className="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Featured Story</div>
               <div className="h-40 bg-gradient-to-br from-secondary to-background rounded mb-4"></div>
               <div className="text-xs text-muted-foreground mb-2">May 2, 2026</div>

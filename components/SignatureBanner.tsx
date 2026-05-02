@@ -22,11 +22,11 @@ export default function SignatureBanner() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight mb-8">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white italic leading-tight mb-4 sm:mb-8">
           Every Draw.<br />
           Every Moment.
         </h2>
-        <p className="text-4xl md:text-6xl font-serif text-white/40 italic">
+        <p className="text-3xl sm:text-4xl md:text-6xl font-serif text-white/40 italic">
           LEE.
         </p>
       </div>
