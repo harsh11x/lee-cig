@@ -21,27 +21,6 @@ const products: Product[] = [
 ]
 
 export default function ProductShowcase() {
-  const [visibleIndex, setVisibleIndex] = useState<number | null>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute('data-index') || '0')
-            setTimeout(() => setVisibleIndex(index), index * 100)
-          }
-        })
-      },
-      { threshold: 0.5 }
-    )
-
-    const cards = document.querySelectorAll('[data-product-card]')
-    cards.forEach((card) => observer.observe(card))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section
       id="products"
@@ -65,12 +44,7 @@ export default function ProductShowcase() {
               key={product.id}
               data-index={index}
               data-product-card
-              className={`group cursor-pointer transition-all duration-700 ${
-                visibleIndex === index
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${index * 80}ms` }}
+              className={`group cursor-pointer transition-all duration-700 opacity-100 translate-y-0`}
             >
               {/* Card Background */}
               <div className="relative h-72 bg-gradient-to-br from-secondary/30 to-background border border-primary/20 rounded overflow-hidden group-hover:border-primary/60 transition-all duration-300">

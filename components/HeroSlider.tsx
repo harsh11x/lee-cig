@@ -10,21 +10,21 @@ export default function HeroSlider() {
   const slides = [
     {
       id: 1,
-      image: '/images/hero-1.png',
+      video: 'https://www.pexels.com/download/video/36590293/',
       headline: 'A Better Tomorrow',
       subheadline: 'We are committed to Building a Smokeless World and creating A Better Tomorrow.',
     },
     {
       id: 2,
-      image: '/images/hero-2.png',
-      headline: 'Advancing Sustainability',
-      subheadline: 'As we mark World Earth Day 2026, we reaffirm our commitment to a more sustainable future.',
+      video: 'https://www.pexels.com/download/video/33857214/',
+      headline: 'Night Life Glamour',
+      subheadline: 'Experience the premium city nights with our luxury selection.',
     },
     {
       id: 3,
-      image: '/images/hero-3.png',
-      headline: 'Transitioning to Renewable Energy',
-      subheadline: 'Our commitment to environmental sustainability drives every aspect of our operations.',
+      video: 'https://www.pexels.com/download/video/36244253/',
+      headline: 'Premium Experience',
+      subheadline: 'Our commitment to excellence drives every aspect of our craftsmanship.',
     }
   ]
 
@@ -46,20 +46,21 @@ export default function HeroSlider() {
         <div
           key={slide.id}
           className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+            index === currentSlide ? 'opacity-100 z-0' : 'opacity-0 -z-10'
           }`}
         >
-          {/* Background Image */}
-          <Image
-            src={slide.image}
-            alt={slide.headline}
-            fill
-            className="object-cover"
-            priority={index === 0}
+          {/* Background Video */}
+          <video
+            src={slide.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full"
           />
 
           {/* Overlay for text readability */}
-          <div className="absolute inset-0 bg-black/45"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
 
           {/* Content card - bottom left like BAT */}
           <div className="absolute bottom-0 left-0 right-0 p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent">

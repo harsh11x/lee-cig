@@ -6,22 +6,7 @@ export default function SignatureBanner() {
   const bannerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const banner = bannerRef.current
-    if (!banner) return
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = banner.getBoundingClientRect()
-      const x = e.clientX - rect.left
-      const percentage = (x / rect.width) * 100
-
-      const shimmer = banner.querySelector('.shimmer') as HTMLElement
-      if (shimmer) {
-        shimmer.style.left = `${percentage}%`
-      }
-    }
-
-    banner.addEventListener('mousemove', handleMouseMove)
-    return () => banner.removeEventListener('mousemove', handleMouseMove)
+    // Effect removed per user request
   }, [])
 
   return (
@@ -41,7 +26,7 @@ export default function SignatureBanner() {
       </div>
 
       {/* Shimmer effect */}
-      <div className="shimmer absolute inset-y-0 left-0 w-1 bg-gradient-to-r from-transparent via-primary/60 to-transparent -translate-x-1/2 pointer-events-none" />
+
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">

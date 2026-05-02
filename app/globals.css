@@ -2,28 +2,28 @@
 @import 'tw-animate-css';
 
 :root {
-  /* Premium Night Party Luxury Palette */
+  /* Premium Night Party Luxury Palette - White/Silver */
   --background: #050505;
   --foreground: #ffffff;
   --cream: #f3f4f6;
   --charcoal: #111111;
   --mahogany: #1a1a1a;
-  --gold: #C5A059;
-  --amber: #D4AF37;
+  --gold: #ffffff;
+  --amber: #f3f4f6;
   --dark-warm: #0a0a0a;
   
   --card: #0a0a0a;
   --card-foreground: #ffffff;
   --popover: #0a0a0a;
   --popover-foreground: #ffffff;
-  --primary: #C5A059;
+  --primary: #ffffff;
   --primary-foreground: #000000;
   --secondary: #1a1a1a;
-  --secondary-foreground: #C5A059;
+  --secondary-foreground: #ffffff;
   --muted: #222222;
   --muted-foreground: #a3a3a3;
   --accent: #222222;
-  --accent-foreground: #C5A059;
+  --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: #333333;
